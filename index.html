@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!--
+        Define o conjunto de caracteres do documento.
+        Isso garante que acentos e caracteres especiais do português apareçam corretamente.
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+        Faz a página se adaptar à largura do dispositivo.
+        Essa linha é essencial para o comportamento responsivo em celulares e tablets.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Título exibido na aba do navegador.
+        Como esta é a página inicial, o título indica o nome da empresa e a função da página.
+    -->
+    <title>Pizzaria Forno D'Oro - Início</title>
+
+    <!--
+        Conexão com o Bootstrap por CDN.
+        O Bootstrap fornece classes prontas para:
+        - grids
+        - menus
+        - botões
+        - cards
+        - espaçamentos
+        - responsividade
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--
+        Conexão com o CSS personalizado do projeto.
+        Ele complementa o Bootstrap com ajustes próprios do site.
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+        CABEÇALHO DO SITE
+        Aqui ficam o nome da empresa, a frase principal e o menu.
+        Esse bloco é repetido nas outras páginas para manter padrão visual e navegação consistente.
+    -->
+    <header class="topo-site text-white py-4">
+        <div class="container">
+            <!-- Título principal da empresa -->
+            <h1 class="text-center">Pizzaria Forno D'Oro</h1>
+
+            <!-- Texto de apoio logo abaixo do título -->
+            <p class="text-center mb-0">
+               Tradição Italiana em cada fatia.
+            </p>
+
+            <!--
+                MENU DE NAVEGAÇÃO PRINCIPAL
+                navbar-expand-md = menu expandido em telas médias ou maiores
+                navbar-dark = estilo do menu sobre fundo escuro
+                mt-3 = margem superior
+                aria-label = acessibilidade para leitores de tela
+            -->
+            <nav class="navbar navbar-expand-md navbar-dark mt-3" aria-label="Menu principal">
+                <div class="container-fluid justify-content-center">
+                    <!--
+                        Botão visível em telas menores.
+                        Ele abre e fecha o menu quando o espaço horizontal é pequeno.
+                    -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal"
+                        aria-controls="menuPrincipal"
+                        aria-expanded="false"
+                        aria-label="Alternar navegação"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!--
+                        Área colapsável do menu.
+                        Esse bloco aparece recolhido no celular e aberto em telas maiores.
+                    -->
+                    <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
+                        <ul class="navbar-nav gap-md-2 text-center">
+                            <!--
+                                nav-link active indica a página atual.
+                                Isso ajuda o usuário a saber em qual página está.
+                            -->
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                            <li class="nav-item"><a class="nav-link" href="sabores.html">Sabores</a></li>
+                            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                            <li class="nav-item"><a class="nav-link" href="avaliacoes.html">Avaliações</a></li>
+                            <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!--
+        CONTEÚDO PRINCIPAL DA PÁGINA
+        main indica semanticamente o conteúdo central do documento.
+    -->
+    <main class="py-5">
+        <!--
+            SEÇÃO DE APRESENTAÇÃO
+            É a primeira informação importante que o usuário visualiza ao entrar no site.
+        -->
+        <section class="container text-center">
+            <h2 class="mb-3">Pizza Artesanal da Alma Italiana</h2>
+
+            <!--
+                intro-text é uma classe personalizada do CSS.
+                Ela limita a largura do texto para melhorar a leitura em telas grandes.
+            -->
+            <p class="mb-4 intro-text">
+               Trabalhamos com a produção de pizzas feitas na hora, utilizando ingredientes de qualidade e receitas cuidadosamente elaboradas.
+            Como delivery, nossa missão é proporcionar praticidade sem abrir mão do sabor, entregando pizzas irresistíveis com rapidez e eficiência.
+            </p>
+
+            <!--
+                Grupo de botões com flexbox do Bootstrap.
+                d-flex = ativa layout flexível
+                justify-content-center = centraliza os botões
+                gap-2 = espaço entre eles
+                flex-wrap = permite quebrar linha se faltar espaço
+            -->
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                <!-- Botão principal levando para a página de serviços -->
+                <a href="sabores.html" class="btn btn-primary">Conheça nossos sabores</a>
+
+                <!-- Botão secundário levando para contato -->
+                <a href="contato.html" class="btn btn-outline-dark">Fale conosco</a>
+            </div>
+        </section>
+
+        <!--
+            SEÇÃO DA IMAGEM PRINCIPAL
+            A imagem ajuda a enriquecer visualmente a página inicial.
+        -->
+        <section class="container mt-5">
+            <div class="text-center">
+                <img
+                    src="logo.png"
+                    alt="Logo da Pizzaria Forno D'Oro"
+                    class="img-fluid rounded shadow hero-image"
+                >
+            </div>
+        </section>
+
+        <!--
+            BLOCO DE DESTAQUE
+            Usamos um contêiner com fundo claro para reforçar uma ideia importante da aula:
+            a organização do conteúdo em páginas diferentes.
+        -->
+        <section class="container mt-5">
+            <div class="p-4 bg-light rounded-3 shadow-sm text-center">
+                <h2 class="mb-3">Por que Nos Escolher?</h2>
+                <p class="mb-0">
+                    Nossas pizzas são feitas com ingredientes frescos, massas artesanais e aquele cuidado especial em cada detalhe.
+                    Aqui você encontra sabor de verdade, atendimento acolhedor e combinações que agradam todos os gostos.
+                    Escolher a gente é garantir uma experiência deliciosa, do primeiro ao último pedaço.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!--
+        RODAPÉ DO SITE
+        Ele também se repete nas demais páginas para manter identidade visual.
+    -->
+    <footer class="footer-site text-white text-center py-3 mt-5">
+        <p class="m-0">Projeto desenvolvido em aula - Senac | UC15</p>
+    </footer>
+
+    <!--
+        JavaScript do Bootstrap.
+        Ele é necessário para recursos interativos como o botão do menu responsivo.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+PACOTE COMENTADO - UC15
+
+Este projeto foi preparado para aula e contém:
+- index.html
+- servicos.html
+- sobre.html
+- contato.html
+- style.css
+
+Todos os arquivos HTML e o CSS foram comentados em português para apoiar a explicação do professor em sala.
+
+Sugestão de uso em aula:
+1. Abrir index.html no navegador.
+2. Navegar entre as páginas pelo menu.
+3. Abrir os arquivos no editor de código.
+4. Explicar a repetição da estrutura comum entre páginas.
+5. Mostrar como o mesmo style.css mantém a identidade visual do projeto.
